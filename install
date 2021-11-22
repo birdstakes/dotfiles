@@ -5,8 +5,10 @@ if [[ ! $REPLY =~ ^[Yy]$ ]]; then
     exit 1
 fi
 
-mv ~/.config/fish ~/.config/fish.bak
+rm -rf ~/.config/fish
 ln -sf $(pwd)/fish ~/.config/fish
+rm -rf ~/.config/i3
+ln -sf $(pwd)/i3 ~/.config/i3
 ln -sf $(pwd)/inputrc ~/.inputrc
 ln -sf $(pwd)/vimrc ~/.vimrc
 ln -sf $(pwd)/tmux.conf ~/.tmux.conf
