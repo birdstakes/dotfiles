@@ -1,0 +1,12 @@
+#!/bin/bash
+read -p "This will overwrite your current configuration files. Continue? [y/N] " -n 1 -r
+echo
+if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+    exit 1
+fi
+
+mv ~/.config/fish ~/.config/fish.bak
+ln -sf $(pwd)/fish ~/.config/fish
+ln -sf $(pwd)/inputrc ~/.inputrc
+ln -sf $(pwd)/vimrc ~/.vimrc
+ln -sf $(pwd)/tmux.conf ~/.tmux.conf
