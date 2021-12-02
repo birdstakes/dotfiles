@@ -1,5 +1,11 @@
 local on_attach = function(client, bufnr)
     require('config.mappings').lsp_mappings(client, bufnr)
+    require('lsp_signature').on_attach {
+        hint_prefix = '',
+        handler_opts = {
+            border = 'none',
+        },
+    }
 end
 
 require('nvim-lsp-installer').on_server_ready(function(server)

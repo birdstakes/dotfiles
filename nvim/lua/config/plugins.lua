@@ -12,6 +12,7 @@ require('packer').startup({function(use)
     use 'williamboman/nvim-lsp-installer'
     use 'folke/lua-dev.nvim'
     use 'puremourning/vimspector'
+    use 'ray-x/lsp_signature.nvim'
 
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-nvim-lsp'
