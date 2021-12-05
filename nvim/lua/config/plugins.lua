@@ -124,6 +124,14 @@ require('packer').startup({function(use)
         end
     }
 
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate',
+        config = function()
+            require('config.plugins.nvim-treesitter')
+        end
+    }
+
     if packer_bootstrap then
         require('packer').sync()
     end
