@@ -13,6 +13,7 @@ require('packer').startup({function(use)
     use 'folke/lua-dev.nvim'
     use 'puremourning/vimspector'
     use 'ray-x/lsp_signature.nvim'
+    use 'tpope/vim-surround'
 
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-nvim-lsp'
