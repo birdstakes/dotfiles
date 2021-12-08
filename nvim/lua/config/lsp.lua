@@ -29,7 +29,12 @@ local null_ls = require('null-ls')
 null_ls.config {
     sources = {
         null_ls.builtins.formatting.black,
-        null_ls.builtins.diagnostics.flake8,
+        null_ls.builtins.diagnostics.flake8.with {
+            extra_args = {
+                '--extend-ignore=E203',
+                '--max-line-length=88',
+            },
+        },
     },
 }
 require('lspconfig')['null-ls'].setup {
