@@ -44,6 +44,7 @@ require('which-key').register {
             c = { '<cmd>lua require("telescope.builtin.internal").colorscheme({ enable_preview = true })<cr>', 'Colorscheme' },
             f = { '<cmd>Telescope find_files<cr>', 'Files' },
             k = { '<cmd>Telescope keymaps<cr>', 'Key mappings' },
+            p = { '<cmd>Telescope projects<cr>', 'Projects' },
             r = { '<cmd>Telescope oldfiles<cr>', 'Recent files' },
             t = { '<cmd>Telescope live_grep<cr>', 'Text' },
         },
