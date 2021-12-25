@@ -1,3 +1,9 @@
+vim.diagnostic.config({
+    underline = false,
+    virtual_text = false,
+    severity_sort = true,
+})
+
 local on_attach = function(client, bufnr)
     require('config.mappings').lsp_mappings(client, bufnr)
     require('lsp_signature').on_attach {
