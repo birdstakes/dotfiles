@@ -32,7 +32,8 @@ require('nvim-lsp-installer').on_server_ready(function(server)
 end)
 
 local null_ls = require('null-ls')
-null_ls.config {
+null_ls.setup {
+    on_attach = on_attach,
     sources = {
         null_ls.builtins.formatting.black,
         null_ls.builtins.diagnostics.flake8.with {
@@ -42,7 +43,4 @@ null_ls.config {
             },
         },
     },
-}
-require('lspconfig')['null-ls'].setup {
-    on_attach = on_attach,
 }
