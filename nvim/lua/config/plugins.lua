@@ -111,6 +111,14 @@ require('packer').startup({function(use)
         end
     }
 
+    use {
+        'akinsho/bufferline.nvim',
+        requires = 'kyazdani42/nvim-web-devicons',
+        config = function()
+            require('config.plugins.bufferline')
+        end
+    }
+
     if packer_bootstrap then
         require('packer').sync()
     end

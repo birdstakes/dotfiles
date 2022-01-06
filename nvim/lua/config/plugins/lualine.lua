@@ -7,7 +7,4 @@ require('lualine').setup {
     sections = {
         lualine_x = { 'coc#status', 'encoding', 'fileformat', 'filetype', 'vim.fn.SleuthIndicator()' },
     },
-    tabline = {
-        lualine_a = { 'buffers' },
-    },
 }
