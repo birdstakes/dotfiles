@@ -1,0 +1,6 @@
+{
+    "coc.preferences.useQuickfixForLocations": true,
+    "codeLens.enable": true,
+    "python.formatting.provider": "black",
+    "python.linting.flake8Enabled": true
+}

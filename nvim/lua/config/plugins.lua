@@ -8,22 +8,12 @@ require('packer').startup({function(use)
     use 'wbthomason/packer.nvim'
     use 'simrat39/symbols-outline.nvim'
     use 'tpope/vim-sleuth'
-    use 'neovim/nvim-lspconfig'
-    use 'williamboman/nvim-lsp-installer'
-    use 'folke/lua-dev.nvim'
     use 'puremourning/vimspector'
-    use 'ray-x/lsp_signature.nvim'
     use 'tpope/vim-surround'
 
-    use 'hrsh7th/cmp-buffer'
-    use 'hrsh7th/cmp-nvim-lsp'
-    use 'hrsh7th/cmp-nvim-lua'
-    use 'hrsh7th/cmp-path'
     use {
-        'hrsh7th/nvim-cmp',
-        config = function()
-            require('config.plugins.nvim-cmp')
-        end
+        'neoclide/coc.nvim',
+        branch = 'release',
     }
 
     use {
@@ -97,19 +87,6 @@ require('packer').startup({function(use)
     use {
         'kevinhwang91/nvim-bqf',
         ft = 'qf',
-    }
-
-    use {
-        'jose-elias-alvarez/null-ls.nvim',
-        requires = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
-    }
-
-    use {
-        'folke/trouble.nvim',
-        requires = 'kyazdani42/nvim-web-devicons',
-        config = function()
-            require('trouble').setup()
-        end
     }
 
     use {

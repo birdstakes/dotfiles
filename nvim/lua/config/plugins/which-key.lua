@@ -22,10 +22,14 @@ require('which-key').register {
         h = { '<cmd>HopChar1<cr>', 'Hop' },
         l = {
             name = '+Lsp',
-            f = { '<cmd>lua vim.lsp.buf.formatting()<cr>', 'Format' },
-            i = { '<cmd>LspInfo<cr>', 'Info' },
-            I = { '<cmd>LspInstallInfo<cr>', 'Installer info' },
-            r = { '<cmd>lua vim.lsp.buf.rename()<cr>', 'Rename' },
+            a = { '<plug>(coc-codeaction-selected)', 'Code action (selected)' },
+            A = { '<plug>(coc-codeaction)', 'Code action (buffer)' },
+            c = { '<cmd>CocConfig<cr>', 'Configure' },
+            d = { '<cmd>CocDiagnostics<cr>', 'Diagnostics' },
+            f = { '<cmd>call CocAction("format")<cr>', 'Format' },
+            l = { '<plug>(coc-codelens-action)', 'CodeLens action' },
+            q = { '<plug>(coc-fix-current)', 'Quick fix' },
+            r = { '<plug>(coc-rename)', 'Rename' },
         },
         o = { '<cmd>SymbolsOutline<cr>', 'Outline' },
         p = {

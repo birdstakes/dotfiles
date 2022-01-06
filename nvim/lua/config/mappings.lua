@@ -21,20 +21,16 @@ vim.api.nvim_set_keymap('n', '<F9>', '<cmd>AsyncTask project-build<cr>', { norem
 vim.api.nvim_set_keymap('i', '<F5>', '<esc><F5>', {})
 vim.api.nvim_set_keymap('i', '<F9>', '<esc><F9>', {})
 
-local M = {}
+-- completion
+vim.api.nvim_set_keymap('i', '<tab>', 'pumvisible() ? "<c-n>" : "<tab>"', { noremap = true, silent = true, expr = true })
+vim.api.nvim_set_keymap('i', '<s-tab>', 'pumvisible() ? "<c-p>" : "<c-h>"', { noremap = true, silent = true, expr = true })
+vim.api.nvim_set_keymap('i', '<c-space>', 'coc#refresh()', { noremap = true, silent = true, expr = true })
 
-function M.lsp_mappings(_, bufnr)
-    local map = function(lhs, rhs)
-        vim.api.nvim_buf_set_keymap(bufnr, 'n', lhs, rhs, { noremap = true, silent = true })
-    end
-
-    map('gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')
-    map('gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
-    map('gi', '<cmd>lua vim.lsp.buf.implementation()<cr>')
-    map('gl', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<cr>')
-    map('gr', '<cmd>lua vim.lsp.buf.references()<cr>')
-    map('gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>')
-    map('K', '<cmd>lua vim.lsp.buf.hover()<cr>')
-end
-
-return M
+-- lsp navigation
+vim.api.nvim_set_keymap('n', '[g', '<plug>(coc-diagnostic-prev)', { silent = true })
+vim.api.nvim_set_keymap('n', ']g', '<plug>(coc-diagnostic-next)', { silent = true })
+vim.api.nvim_set_keymap('n', 'gd', '<plug>(coc-definition)', { silent = true })
+vim.api.nvim_set_keymap('n', 'gy', '<plug>(coc-type-definition)', { silent = true })
+vim.api.nvim_set_keymap('n', 'gi', '<plug>(coc-implementation)', { silent = true })
+vim.api.nvim_set_keymap('n', 'K', '<cmd>call CocActionAsync("doHover")<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'gr', '<plug>(coc-references)', { silent = true })
