@@ -2,7 +2,6 @@ require('which-key').setup()
 
 require('which-key').register {
     ['<leader>'] = {
-        ['/'] = { '<cmd>lua require("Comment.api").toggle_current_linewise()<cr>', 'Comment' },
         b = { '<cmd>BufferLinePick<cr>', 'Jump to buffer' },
         c = { '<cmd>bdelete<cr>', 'Close buffer' },
         C = { '<cmd>edit $MYVIMRC<cr>', 'Edit config' },
@@ -70,7 +69,6 @@ require('which-key').register {
 
 require('which-key').register({
     ['<leader>'] = {
-        ['/'] = { '<esc><cmd>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<cr>', 'Comment' },
         p = { '"+p', "Put clipboard" },
         y = { '"+y', "Yank clipboard" },
     },
