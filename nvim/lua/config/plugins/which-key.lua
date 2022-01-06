@@ -33,7 +33,8 @@ require('which-key').register {
             r = { '<plug>(coc-rename)', 'Rename' },
         },
         o = { '<cmd>SymbolsOutline<cr>', 'Outline' },
-        p = {
+        p = { '"+p', "Put clipboard" },
+        P = {
             name = '+Packer',
             c = { '<cmd>PackerCompile<cr>', 'Compile' },
             C = { '<cmd>PackerClean<cr>', 'Clean' },
@@ -62,12 +63,16 @@ require('which-key').register {
             r = { '<cmd>AsyncTask project-run<cr>', 'Run' },
         },
         T = { '<cmd>Trouble<cr>', 'Trouble' },
+        w = { '<cmd>write<cr>', 'Write' },
+        y = { '"+y', "Yank clipboard" },
     },
 }
 
 require('which-key').register({
     ['<leader>'] = {
         ['/'] = { '<esc><cmd>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<cr>', 'Comment' },
+        p = { '"+p', "Put clipboard" },
+        y = { '"+y', "Yank clipboard" },
     },
 },
 { mode = 'v' })
