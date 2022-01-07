@@ -1,6 +1,10 @@
 {
     "coc.preferences.useQuickfixForLocations": true,
     "codeLens.enable": true,
+    "diagnostic.errorSign": "",
+    "diagnostic.warningSign": "⚠",
+    "diagnostic.infoSign": "",
+    "diagnostic.hintSign": "",
     "python.formatting.provider": "black",
     "python.linting.flake8Enabled": true
 }
