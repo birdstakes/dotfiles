@@ -52,6 +52,7 @@ require('which-key').register {
             p = { '<cmd>Telescope projects<cr>', 'Projects' },
             r = { '<cmd>Telescope oldfiles<cr>', 'Recent files' },
             t = { '<cmd>Telescope live_grep<cr>', 'Text' },
+            w = { '<cmd>Telescope grep_string<cr>', 'Word under cursor' },
         },
         t = {
             name = '+Tasks',
