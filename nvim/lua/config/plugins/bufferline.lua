@@ -3,7 +3,7 @@ require('bufferline').setup {
         offsets = {
             {
                 filetype = 'NvimTree',
-                padding = 1,
+                highlight = 'BufferlineFill',
             },
         },
         separator_style = 'slant',

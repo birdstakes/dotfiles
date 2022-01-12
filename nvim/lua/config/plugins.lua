@@ -97,9 +97,12 @@ require('packer').startup({function(use)
     }
 
     use {
-        'LunarVim/onedarker',
+        'folke/tokyonight.nvim',
         config = function()
-            vim.cmd('colorscheme onedarker')
+            vim.g.tokyonight_style = 'night'
+            vim.g.tokyonight_italic_comments = false
+            vim.g.tokyonight_italic_keywords = false
+            vim.cmd('colorscheme tokyonight')
         end
     }
 
