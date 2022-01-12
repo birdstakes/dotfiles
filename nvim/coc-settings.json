@@ -1,5 +1,6 @@
 {
     "coc.preferences.useQuickfixForLocations": true,
+    "coc.preferences.formatOnSaveFiletypes": ["rust"],
     "codeLens.enable": true,
     "diagnostic.errorSign": "",
     "diagnostic.warningSign": "⚠",
