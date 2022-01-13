@@ -1,11 +1,15 @@
 {
     "coc.preferences.useQuickfixForLocations": true,
-    "coc.preferences.formatOnSaveFiletypes": ["rust"],
+    "coc.preferences.formatOnSaveFiletypes": ["python", "rust"],
     "codeLens.enable": true,
     "diagnostic.errorSign": "",
     "diagnostic.warningSign": "⚠",
     "diagnostic.infoSign": "",
     "diagnostic.hintSign": "",
     "python.formatting.provider": "black",
-    "python.linting.flake8Enabled": true
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=88",
+        "--extend-ignore=E203"
+    ]
 }
